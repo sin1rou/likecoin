@@ -1,0 +1,10 @@
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /transaction/{transactionId} {
+      allow read: if true;
+    }
+    match /coins/{coinId} {
+      allow read: if true;
+    }
+  }
+}
